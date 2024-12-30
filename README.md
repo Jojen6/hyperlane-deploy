@@ -24,13 +24,13 @@ yarn install
 
 ## Deploying Hyperlane
 
-See below for instructions on using the scripts in this repo to deploy a Hyperlane core instance. For more details see the [deploy documentation](https://docs.hyperlane.xyz/docs/deploy/deploy-hyperlane).
+Below are instructions on using the scripts in this repo to deploy a Hyperlane core instance. For more details, see the [deploy documentation](https://docs.hyperlane.xyz/docs/deploy/deploy-hyperlane).
 
 ### Deploying core contracts
 
-If you're deploying to a new chain, ensure there is a corresponding entry `config/chains.ts`, `config/multisig_ism.ts`, and `config/start_blocks.ts`.
+If you're deploying to a new chain, ensure a corresponding entry `config/chains.ts`, `config/multisig_ism.ts`, and `config/start_blocks.ts`.
 
-This script is used to deploy the following core Hyperlane contracts to a new chain. The Hyperlane protocol expects exactly one instance of these contracts on every supported chain.
+This script deploys the following core Hyperlane contracts to a new chain. The Hyperlane protocol expects exactly one instance of these contracts on every supported chain.
 
 - `Mailbox`: for sending and receiving messages
 - `ValidatorAnnounce`: for registering validators
@@ -69,7 +69,7 @@ See below for instructions on using the scripts in this repo to deploy Hyperlane
 
 Establishing a warp route requires deployment of `HypERC20` contracts to the desired chains. Ensure there is an entry for all chains in `config/chains.ts`.
 
-The deployment also require details about the existing (collateral) token and the new synthetics that will be created. Ensure there are entries for them in `config/warp_tokens.ts`.
+The deployment also requires details about the existing (collateral) token and the new synthetics that will be created. Ensure there are entries for them in `config/warp_tokens.ts`.
 
 ```sh
 yarn ts-node scripts/deploy-warp-routes.ts \
